@@ -5,4 +5,5 @@ class Venue
     @name = name
     @number = number
   end
+
 end
