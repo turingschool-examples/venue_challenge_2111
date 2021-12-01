@@ -64,4 +64,5 @@ end
       venue.add_patron('James')
       venue.add_patron('Cat')
       expect(venue.over_capacity?).to eq true
+    end
   end

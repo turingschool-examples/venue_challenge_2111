@@ -17,8 +17,17 @@ class Venue
 
   def yell_at_patrons
   #binding.pry
-  patrons.each do |patron|
-    @capitalized_patrons << patron.upcase
+    patrons.each do |patron|
+      @capitalized_patrons << patron.upcase
+    end
   end
+
+  def over_capacity?
+    patron_counter = patrons.length
+    if patron_counter > capacity
+      return true
+    else
+      return false
+    end
   end
 end
