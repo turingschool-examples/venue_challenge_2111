@@ -16,7 +16,6 @@ describe Venue do
     end
 
     it 'can read the capacity' do
-      skip
       expect(@venue.capacity).to eq 4
     end
 
