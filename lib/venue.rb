@@ -15,4 +15,7 @@ class Venue
     patrons.map { |patron| patron.upcase }
   end
 
+  def over_capacity?
+    @patrons.size > capacity
+  end
 end
