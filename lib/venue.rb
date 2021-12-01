@@ -22,6 +22,10 @@ class Venue
     true
   end
 
+  def kick_out
+    if @patrons.size >= 5
+      @patrons.pop
+    end
+  end 
 
-  
 end
