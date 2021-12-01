@@ -8,4 +8,5 @@ class Venue
     @capacity  = capacity
     @patrons   =[]
   end
+
 end
