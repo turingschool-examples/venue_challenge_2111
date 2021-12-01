@@ -47,6 +47,8 @@ describe Venue do
     end
   end
 
+  # Iteration 3
+
   describe '#over_capacity' do
     it 'returns false if number of patrons is less than capacity' do
       venue = Venue.new('Bluebird', 4)
@@ -75,4 +77,37 @@ describe Venue do
       expect(venue.over_capacity?).to be true
     end
   end
+
+  # Iteration 4
+  describe '#kick_out' do
+    it 'removes the last patron who entered' do
+      venue = Venue.new('Bluebird', 4)
+      venue.add_patron('Mike')
+      venue.add_patron('Megan')
+      venue.add_patron('Bob')
+      venue.add_patron('James')
+      venue.add_patron('Cat')
+      expect(venue.patrons).to eq(['Mike', 'Megan', 'Bob', 'James', 'Cat'])
+      venue.kick_out
+      expect(venue.patrons).to eq(['Mike', 'Megan', 'Bob', 'James'])
+      expect(venue.over_capacity?).to be false
+    end
+
+    it 'removes most recent patrons until the venue is no longer over capacity'
+      venue = Venue.new('Bluebird', 4)
+      venue.add_patron('Mike')
+      venue.add_patron('Megan')
+      venue.add_patron('Bob')
+      venue.add_patron('James')
+      venue.add_patron('Cat')
+      venue.add_patron('Bliff')
+      venue.add_patron('Huck')
+      venue.add_patron()
+      expect(venue.patrons).to eq(['Mike', 'Megan', 'Bob', 'James', 'Cat'])
+      venue.kick_out
+      expect(venue.patrons).to eq(['Mike', 'Megan', 'Bob', 'James'])
+      expect(venue.over_capacity?).to be false
+    end
+  end
+
 end
