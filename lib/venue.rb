@@ -18,4 +18,8 @@ class Venue
   def over_capacity?
     @patrons.count > capacity
   end
+
+  def kick_out
+    @patrons.shift
+  end
 end
