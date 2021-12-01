@@ -55,5 +55,12 @@ describe Venue do
       venue.add_patron('Bob')
       expect(venue.over_capacity).to be(true)
     end
+    it 'returns a boolean if venue is overcapacity' do
+      venue = Venue.new('Bluebird', 4)
+      venue.add_patron('Mike')
+      venue.add_patron('Megan')
+      venue.add_patron('Bob')
+      expect(venue.over_capacity).to be(false)
+    end
   end
 end
