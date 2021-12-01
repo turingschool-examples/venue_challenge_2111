@@ -19,4 +19,7 @@ class Venue
     return shouted_patron_names
   end
 
+  def over_capacity?
+    @patrons.length > @capacity ? true : false 
+  end
 end
