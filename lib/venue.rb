@@ -28,6 +28,7 @@ attr_reader :venue, :capacity, :patron
   venue.add_patron('Bob')
 
   def yell_at_patrons
+# need to create accumulator and then use each to iterate through array capitalizing names, then push them into the accumulator, then output accumulator
     puts patron
   end
 
