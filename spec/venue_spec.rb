@@ -63,4 +63,37 @@ describe Venue do
       expect(venue.over_capacity).to be(false)
     end
   end
+  describe '#kick_out' do
+    it 'will remove guests to fit capacity' do
+      venue = Venue.new('Bluebird', 2)
+      venue.add_patron('Mike')
+      venue.add_patron('Megan')
+      venue.add_patron('Bob')
+      expect(venue.over_capacity).to be(true)
+      venue.kick_out
+      expect(venue.over_capacity).to be(false)
+    end
+
+    it 'will do nothing if at capacity' do
+      venue = Venue.new('Bluebird', 3)
+      venue.add_patron('Mike')
+      venue.add_patron('Megan')
+      venue.add_patron('Bob')
+      expect(venue.over_capacity).to be(false)
+      venue.kick_out
+      expect(venue.over_capacity).to be(false)
+    end
+
+    it 'will do nothing under capacity' do
+      #until @patrons.length == capacity won't work here
+      #changed to while >
+      venue = Venue.new('Bluebird', 3)
+      venue.add_patron('Mike')
+      venue.add_patron('Megan')
+      venue.kick_out
+      expect(venue.over_capacity).to be(false)
+  end
+end
+
+
 end
