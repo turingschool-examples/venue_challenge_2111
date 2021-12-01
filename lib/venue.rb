@@ -17,4 +17,8 @@ class Venue
     end
     return yell_at
   end
+
+  def over_capacity?
+    @patrons.count > @capacity
+  end
 end
