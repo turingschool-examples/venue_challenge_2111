@@ -7,10 +7,15 @@ class Venue
   end
 
   def name
-  @name
+    @name
   end
 
   def capacity
-  @capacity
+    @capacity
   end
+
+  def add_patron(patron)
+    @patrons << patron
+  end
+
 end
