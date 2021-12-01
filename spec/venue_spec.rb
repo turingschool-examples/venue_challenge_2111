@@ -1,6 +1,8 @@
 require 'rspec'
 require './lib/venue'
 
+  # Iteration 1
+
 describe Venue do
   describe '#initialize' do
     it 'is a venue' do
@@ -68,6 +70,7 @@ describe Venue do
   end
 
 # Iteration 4
+
   describe "#kick_out" do
     it 'removes a patron from the venue' do
       venue = Venue.new('Bluebird', 4)
@@ -81,9 +84,7 @@ describe Venue do
       expect(venue.over_capacity?).to be true
 
       venue.kick_out
-
       expect(venue.over_capacity?).to be false
     end
   end
-
 end
