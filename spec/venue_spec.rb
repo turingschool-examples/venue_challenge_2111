@@ -31,7 +31,7 @@ describe Venue do
 
   describe '#add_patron' do
     it 'returns a list of patrons' do
-      
+
       venue = Venue.new('Bluebird', 4)
       venue.add_patron('Mike')
       venue.add_patron('Megan')
