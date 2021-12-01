@@ -7,5 +7,15 @@ def initialize(venue_name, venue_capacity)
 end
 def add_patron(patrons)
   @patrons = ['Mike', 'Megan', 'Bob']
+
 end
+def yell_at_patrons(patrons)
+
+  patrons = ['Mike', 'Megan', 'Bob']
+
+  yell_at_patrons = []
+
+ yell_at_patrons.upcase
+end
+
 end
