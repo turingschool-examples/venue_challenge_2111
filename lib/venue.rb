@@ -22,8 +22,8 @@ class Venue
   end
 
   def kick_out
-    if venue.over_capacity?
+    until !over_capacity? 
       @patrons.shift
-    end 
+    end
   end
 end
