@@ -16,4 +16,12 @@ class Venue
     end
   end
 
+  def over_capacity
+    if patrons.length > capacity
+      return true
+    else
+      return false
+    end
+  end
+
 end
