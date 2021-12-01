@@ -11,4 +11,12 @@ class Venue
     @patrons << new_patron
   end
 
+  def yell_at_patrons
+    capitialized_patrons = []
+    @patrons.each do |patron|
+      capitialized_patrons << patron.upcase
+    end
+    capitialized_patrons
+  end
+
 end

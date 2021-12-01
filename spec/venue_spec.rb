@@ -38,7 +38,6 @@ describe Venue do
 
   describe '#yell_at_patrons' do
     it 'returns a list of uppercased names' do
-      skip
       @venue.add_patron('Mike')
       @venue.add_patron('Megan')
       @venue.add_patron('Bob')
