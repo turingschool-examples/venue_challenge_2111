@@ -1,2 +1,4 @@
 class Venue
-end 
+  def initialize(name, capacity)
+  end
+end
