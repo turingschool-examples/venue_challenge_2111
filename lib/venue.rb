@@ -1,9 +1,11 @@
 class Venue
 
   attr_reader :name,
-              :capacity
+              :capacity,
+              :patrons
   def initialize(name, capacity)
     @name = name
     @capacity = capacity
+    @patrons = []
   end
 end
