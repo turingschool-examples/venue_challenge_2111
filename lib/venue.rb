@@ -32,3 +32,7 @@ class Venue
     end
   end
 end
+
+#Not sufficient time to attempt.
+#Would need an if statement to check if over capacity
+#maybe each do to remove from array and check until false?

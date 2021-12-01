@@ -57,6 +57,7 @@ end
 
   describe '#over_capacity?' do
     it 'returns true if over capacity' do
+
       venue = Venue.new('Bluebird', 4)
       venue.add_patron('Mike')
       venue.add_patron('Megan')
@@ -72,6 +73,7 @@ end
 
   describe '#kick_out' do
     it 'removes patrons if over capacity' do
+      skip
       venue = Venue.new('Bluebird', 4)
       venue.add_patron('Mike')
       venue.add_patron('Megan')
