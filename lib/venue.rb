@@ -20,6 +20,6 @@ class Venue
   end
 
   def kick_out
-    @patrons.shift
+    @patrons.shift while over_capacity?
   end
 end

@@ -85,6 +85,17 @@ describe Venue do
 
       venue.kick_out
       expect(venue.over_capacity?).to be false
+
+      venue.add_patron('Andrew')
+      venue.add_patron('Lisa')
+      venue.add_patron('Jeffery')
+      venue.add_patron('Amanda')
+      venue.add_patron('Bruce')
+      expect(venue.over_capacity?).to be true
+
+      venue.kick_out
+      expect(venue.over_capacity?).to be false
+
     end
   end
 end
