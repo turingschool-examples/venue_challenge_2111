@@ -24,6 +24,12 @@ class Venue
     end
   end
 
-
+  def kick_out
+    if patrons.length < capacity
+      return patrons
+    else
+      patrons.pop()
+    end
+  end
 
 end
