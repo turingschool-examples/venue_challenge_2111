@@ -92,10 +92,11 @@ describe Venue do
       expect(venue.patrons).to eq(["Mike", "Megan", "Bob", "James", "Cat"])
       expect(venue.patrons.length).to eq(5)
       expect(venue.over_capacity?).to eq(true)
+      venue.add_patron('Steven')
 
       venue.kick_out
 
       expect(venue.over_capacity?).to eq(false)
     end
-  end 
+  end
 end
