@@ -14,4 +14,8 @@ class Venue
   def capacity
     @capacity
   end
+
+  def patrons
+    @patrons 
+  end
 end
