@@ -5,6 +5,9 @@ class Venue
     @name = name
     @capacity = capacity
     @patrons = []
+  end
 
+  def name
+    @name
   end
 end
