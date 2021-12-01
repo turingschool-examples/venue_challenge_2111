@@ -7,6 +7,12 @@ class Venue
   end
 
   def add_patron(patron)
-    @patrons << patron 
+    @patrons << patron
+  end
+
+  def yell_at_patrons
+    @patrons.map do |name|
+      name.upcase
+    end 
   end
 end
