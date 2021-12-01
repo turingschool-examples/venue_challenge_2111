@@ -19,4 +19,12 @@ class Venue
     capitialized_patrons
   end
 
+  def over_capacity
+    if patrons.count <= 3
+      false
+    else
+      true
+    end
+  end
+
 end
