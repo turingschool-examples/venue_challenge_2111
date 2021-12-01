@@ -71,23 +71,21 @@ describe Venue do
 
       expect(venue.over_capacity?).to be(true)
     end
+  end 
 
-    describe '#kick_out' do
-      it 'can kick out patron' do
-        skip
-        venue = Venue.new('Bluebird', 4)
-        venue.add_patron('Mike')
-        venue.add_patron('Megan')
-        venue.add_patron('Bob')
-        venue.add_patron('James')
-        venue.add_patron('Cat')
-        expect(venue.over_capacity?).to be(true)
-        venue.kick_out
-        expect(venue.over_capacity?).to be(false)
-      end
+    #Iteration 4
+
+  describe '#kick_out' do
+    it 'can kick out patron' do
+      venue = Venue.new('Bluebird', 4)
+      venue.add_patron('Mike')
+      venue.add_patron('Megan')
+      venue.add_patron('Bob')
+      venue.add_patron('James')
+      venue.add_patron('Cat')
+      expect(venue.over_capacity?).to be(true)
+      venue.kick_out
+      expect(venue.over_capacity?).to be(false)
+    end
   end
-
-  #Iteration 4
-
-
 end
