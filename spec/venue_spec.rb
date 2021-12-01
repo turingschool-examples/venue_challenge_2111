@@ -93,7 +93,7 @@ describe Venue do
       expect(venue.over_capacity?).to be false
     end
 
-    it 'removes most recent patrons until the venue is no longer over capacity'
+    it 'removes most recent patrons until the venue is no longer over capacity' do
       venue = Venue.new('Bluebird', 4)
       venue.add_patron('Mike')
       venue.add_patron('Megan')
@@ -102,8 +102,7 @@ describe Venue do
       venue.add_patron('Cat')
       venue.add_patron('Bliff')
       venue.add_patron('Huck')
-      venue.add_patron()
-      expect(venue.patrons).to eq(['Mike', 'Megan', 'Bob', 'James', 'Cat'])
+      venue.add_patron('Squeeb')
       venue.kick_out
       expect(venue.patrons).to eq(['Mike', 'Megan', 'Bob', 'James'])
       expect(venue.over_capacity?).to be false

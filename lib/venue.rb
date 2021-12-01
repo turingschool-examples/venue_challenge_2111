@@ -23,6 +23,8 @@ class Venue
   end
 
   def kick_out
-    @patrons.pop
+    @patrons.each do
+      @patrons.pop if @patrons.count > @capacity
+    end
   end
 end
