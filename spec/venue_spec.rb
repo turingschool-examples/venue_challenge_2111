@@ -20,7 +20,6 @@ describe Venue do
     end
 
     it 'has no patrons by default' do
-      skip
       expect(@venue.patrons).to eq []
     end
   end
