@@ -19,6 +19,14 @@ class Venue
    return @capitalized_patrons
   end
 
+  def over_capacity?
+    if @capacity >= @patrons.count
+      false
+    else
+      true
+    end
+  end
+
 
 
 end
