@@ -1,16 +1,15 @@
 require 'rspec'
 require './lib/venue'
+require 'venue'
 
 describe Venue do
   describe '#initialize' do
     it 'is a venue' do
-      skip
       venue = Venue.new('Bluebird', 4)
       expect(venue).to be_a Venue
     end
 
     it 'can read the name' do
-      skip
       venue = Venue.new('Bluebird', 4)
       expect(venue.name).to eq 'Bluebird'
     end
