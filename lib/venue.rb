@@ -4,6 +4,7 @@ class Venue
     @name = name
     @capacity = capacity
     @patrons = []
+    @crowd = 0
   end
 
   def add_patron(patron)
@@ -28,4 +29,13 @@ class Venue
     end
   end
 
+  def kick_out()
+    crowd = @patrons.length
+    if crowd < capacity
+
+    elsif crowd > capacity
+      @patrons.remove('James')
+      @patrons.remove('James')
+    end
+  end
 end
