@@ -1,5 +1,4 @@
-require 'rspec'
-require './lib/venue'
+require '../lib/venue'
 
 describe Venue do
   describe '#initialize' do
