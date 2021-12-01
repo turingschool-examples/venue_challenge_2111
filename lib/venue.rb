@@ -23,4 +23,11 @@ class Venue
        @over_capacity = true
      end
    end
-end
+   def kick_out
+     if patrons.length >= @capacity
+       patrons.pop
+     elsif patrons.length <= @capacity
+       @over_capacity = false
+     end
+    end
+ end
