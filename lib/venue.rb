@@ -20,19 +20,11 @@ class Venue
   end
 
   def over_capacity?
-    if @capacity >= @patrons.count
-      false
-    else
-      true
-    end
+    @capacity >= @patrons.count ? false : true
   end
 
   def kick_out
-    if @patrons.count > @capacity
-      @patrons.shift
-    else
-      false
-    end
+    @patrons.count > @capacity ? @patrons.shift : false
   end
 
 end
