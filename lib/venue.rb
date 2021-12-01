@@ -10,4 +10,8 @@ class Venue
   def name
     @name
   end
+
+  def capacity
+    @capacity
+  end
 end
