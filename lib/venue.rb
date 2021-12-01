@@ -5,6 +5,7 @@ class Venue
     @name = name
     @capacity = capacity
     @patrons = []
+    @count = 0
   end
 
   def patrons
@@ -20,11 +21,22 @@ class Venue
   end
 
   def over_capacity?
-    count = patrons.count
-    if count > capacity
-      return false
-    else
+    @count = patrons.count
+    if @count > capacity
       return true
+    else
+      return false
     end
   end
+
+  def kick_out
+    if
+      @patrons.pop
+      @count = patrons.count
+    else
+
+    end
+
+  end
 end
+#binding.pry
