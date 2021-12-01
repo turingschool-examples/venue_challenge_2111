@@ -18,4 +18,13 @@ class Venue
   def yell_at_patrons
     patrons.map(&:upcase)
   end
+
+  def over_capacity?
+    count = patrons.count
+    if count > capacity
+      return false
+    else
+      return true
+    end
+  end
 end
