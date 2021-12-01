@@ -19,6 +19,8 @@ class Venue
    def over_capacity?
      if patrons.length <= capacity
        @over_capacity = false
+     else
+       @over_capacity = true
      end
    end
 end
