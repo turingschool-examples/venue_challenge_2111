@@ -28,7 +28,6 @@ describe Venue do
 
   describe '#add_patron' do
     it 'returns a list of patrons' do
-      skip
       @venue.add_patron('Mike')
       @venue.add_patron('Megan')
       @venue.add_patron('Bob')

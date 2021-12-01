@@ -6,4 +6,9 @@ class Venue
     @capacity = capacity
     @patrons = []
   end
+
+  def add_patron(new_patron)
+    @patrons << new_patron
+  end
+
 end
