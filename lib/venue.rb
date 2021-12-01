@@ -6,7 +6,15 @@ def initialize(name, capacity)
   @capacity = capacity
   @patrons = [ ]
   end
+
+  def add_patron(name)
+    @patrons << name
+  end
 end
+
+
+
+
 
 
 venue = Venue.new('Bluebird', 4)
