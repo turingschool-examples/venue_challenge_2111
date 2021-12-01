@@ -1,9 +1,9 @@
 class Venue
-  def initialize(argument, argument2)
-    @argument = argument
+  attr_reader :name, :capacity
+
+  def initialize(name, capacity)
+    @name = name
+    @capacity = capacity
   end
 
-  #def initialize(name)
-  #  @name = name
-  #end
 end
