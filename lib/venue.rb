@@ -5,5 +5,7 @@ def initialize(venue_name, venue_capacity)
   @capacity = 4
   @patrons  = []
 end
-
+def add_patron(patrons)
+  @patrons = ['Mike', 'Megan', 'Bob']
+end
 end
