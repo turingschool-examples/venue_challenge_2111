@@ -16,13 +16,13 @@ describe Venue do
     end
 
     it 'can read the capacity' do
-      
+
       venue = Venue.new('Bluebird', 4)
       expect(venue.capacity).to eq 4
     end
 
     it 'has no patrons by default' do
-      skip
+      
       venue = Venue.new('Bluebird', 4)
       expect(venue.patrons).to eq []
     end
