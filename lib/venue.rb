@@ -6,5 +6,9 @@ class Venue
 
   def name
     @name = "Bluebird"
+  end
+
+  def capacity
+    @capacity = 4
   end 
 end

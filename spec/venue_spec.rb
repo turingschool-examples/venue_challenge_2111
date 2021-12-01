@@ -13,7 +13,7 @@ describe Venue do
       expect(venue.name).to eq 'Bluebird'
     end
 
-    xit 'can read the capacity' do
+    it 'can read the capacity' do
       venue = Venue.new('Bluebird', 4)
       expect(venue.capacity).to eq 4
     end
