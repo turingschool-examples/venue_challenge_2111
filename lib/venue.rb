@@ -27,4 +27,9 @@ class Venue
     end
   end
 
+  def kick_out
+    while @patrons.count > 3
+      @patrons.pop
+    end
+  end
 end
