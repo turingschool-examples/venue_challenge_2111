@@ -9,4 +9,7 @@ class Venue
     @patrons   =[]
   end
 
+  def add_patron(patron)
+    @patrons << patron
+  end
 end
