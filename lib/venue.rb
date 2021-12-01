@@ -16,6 +16,10 @@ class Venue
   end
 
   def patrons
-    @patrons 
+    @patrons
+  end
+
+  def add_patron(patron)
+    @patrons.push(patron)
   end
 end
