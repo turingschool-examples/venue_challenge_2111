@@ -28,5 +28,7 @@ class Venue
   end
 
   def kick_out
+    capacity_index = capacity - 1
+    @patrons = @patrons[0..capacity_index]
   end
 end
