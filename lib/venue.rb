@@ -17,7 +17,15 @@ class Venue
     end
 
     return yell_at_patrons
+  end
 
+  def over_capacity?
+    crowd = @patrons.length
+    if crowd < capacity
+      return false
+    elsif crowd > capacity
+      return true
+    end
   end
 
 end
