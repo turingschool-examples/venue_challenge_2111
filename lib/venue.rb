@@ -14,4 +14,8 @@ class Venue
   def add_patron(string)
     @patrons << string
   end
+
+  def yell_at_patrons
+    patrons.map(&:upcase)
+  end
 end
