@@ -44,12 +44,27 @@ describe Venue do
 
   describe '#yell_at_patrons' do
     it 'returns a list of uppercased names' do
-      
+
       venue = Venue.new('Bluebird', 4)
       venue.add_patron('Mike')
       venue.add_patron('Megan')
       venue.add_patron('Bob')
       expect(venue.yell_at_patrons).to eq ['MIKE', 'MEGAN', 'BOB']
     end
+  end
+
+  describe '#over_capacity?' do
+    it 'can check if venue is over capacity' do
+
+      venue = Venue.new('Bluebird', 4)
+      venue.add_patron('Mike')
+      venue.add_patron('Megan')
+      venue.add_patron('Bob')
+      expect(venue.over_capacity?).to_be(False)
+
+      venue.add_patron('James')
+      venue.add_patron('Cat')
+      expect(venue.over_capacity?).to_be(True)
+    end 
   end
 end
