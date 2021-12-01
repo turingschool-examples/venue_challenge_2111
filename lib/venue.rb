@@ -5,6 +5,7 @@ class Venue
     @capacity = capacity
     @patrons = []
     @yell = []
+    @over_capacity = false
   end
   def add_patron(name)
     @patrons << name
@@ -14,5 +15,10 @@ class Venue
        @yell << name.upcase
      end
      return @yell
+   end
+   def over_capacity?
+     if patrons.length <= capacity
+       @over_capacity = false
+     end
    end
 end
