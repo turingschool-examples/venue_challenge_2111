@@ -2,6 +2,7 @@ class Venue
   def initialize(name, capacity)
     @name = name
     @capacity = capacity
+    @patrons = patrons
   end
 
   def name
@@ -10,5 +11,9 @@ class Venue
 
   def capacity
     @capacity = 4
+  end
+
+  def patrons
+    @patrons = []
   end 
 end
