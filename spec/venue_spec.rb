@@ -32,14 +32,12 @@ describe Venue do
       venue.add_patron('Mike')
       venue.add_patron('Megan')
       venue.add_patron('Bob')
-
       expect(venue.patrons).to eq ['Mike', 'Megan', 'Bob']
     end
   end
 
   describe '#yell_at_patrons' do
     it 'returns a list of uppercased names' do
-      skip
       venue = Venue.new('Bluebird', 4)
       venue.add_patron('Mike')
       venue.add_patron('Megan')
