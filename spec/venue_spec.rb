@@ -46,4 +46,26 @@ describe Venue do
       expect(venue.yell_at_patrons).to eq ['MIKE', 'MEGAN', 'BOB']
     end
   end
+
+# Iteration 3
+
+  describe '#over_capacity?' do
+    it 'is false when fewer patrons than capacity limit' do
+      venue = Venue.new('Bluebird', 4)
+      expect(venue.capacity).to eq 4
+      venue.add_patron('Mike')
+      venue.add_patron('Megan')
+      venue.add_patron('Bob')
+      expect(venue.over_capacity?).to be false
+
+      venue.add_patron('Steven')
+      venue.add_patron('Janet')
+
+      expect(venue.over_capacity?).to be true
+
+    end
+  end
+
+# Iteration 4
+
 end
