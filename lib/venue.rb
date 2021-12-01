@@ -1,6 +1,10 @@
 class Venue
-  def initialize(argument, arg2)
-    @argument = argument
-    @arg2 = arg2
+  attr_reader :name,
+              :capacity
+
+  def initialize(name, capacity)
+    @name = name
+    @capacity = capacity
+    @patrons = []
   end
 end
