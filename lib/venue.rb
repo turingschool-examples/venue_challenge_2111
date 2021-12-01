@@ -14,10 +14,8 @@ class Venue
   def yell_at_patrons
     @patrons.each {|patron| patron.upcase!}
   end
-end
 
-venue = Venue.new('Bluebird', 4)
-venue.add_patron('Mike')
-venue.add_patron('Megan')
-venue.add_patron('Bob')
-p venue.yell_at_patrons
+  def over_capacity?
+    @patrons.size > 5
+  end
+end
