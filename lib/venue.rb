@@ -1,13 +1,12 @@
 #require 'pry'
 class Venue
-  attr_reader :name, :capacity, :patrons, :capitalized_patrons
+  attr_reader :name, :capacity, :patrons
 
   def initialize(name, capacity)
     #binding.pry
-    @name                = name
-    @capacity            = capacity
-    @patrons             = []
-    @capitalized_patrons = []
+    @name      = name
+    @capacity  = capacity
+    @patrons   = []
   end
 
   def add_patron(patron)
@@ -17,9 +16,11 @@ class Venue
 
   def yell_at_patrons
   #binding.pry
+  capitalized_patrons = []
     patrons.each do |patron|
-      @capitalized_patrons << patron.upcase
+      capitalized_patrons << patron.upcase
     end
+    return capitalized_patrons
   end
 
   def over_capacity?
