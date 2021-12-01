@@ -24,7 +24,8 @@ class Venue
   end
 
   def kick_out
-    over_capacity? == true ? @patrons.pop : skip
-    over_capacity? == true ? @patrons.pop : skip
+    while over_capacity? == true
+      patrons.pop
+    end
   end
 end
