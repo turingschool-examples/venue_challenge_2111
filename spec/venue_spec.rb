@@ -55,5 +55,14 @@ describe Venue do
       venue.add_patron('Bob')
       expect(venue.over_capacity?).to be false
     end
+
+    it 'returns false if number of patrons is equal to capacity' do
+      venue = Venue.new('Bluebird', 4)
+      venue.add_patron('Mike')
+      venue.add_patron('Megan')
+      venue.add_patron('Bob')
+      venue.add_patron('Cornelius')
+      expect(venue.over_capacity?).to be false
+    end
   end
 end
