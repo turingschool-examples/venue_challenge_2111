@@ -1,6 +1,8 @@
 class Venue
+  attr_reader :name
 
   def initialize(name, capacity)
-  end 
+    @name = name 
+  end
 
 end
