@@ -13,8 +13,15 @@ def initialize(name, capacity)
 
   def yell_at_patrons
   patrons_upcase = patrons.each {|name| name.upcase!}
-    end
   end
 
+  def over_capacity?
+    if @capacity <= 4
+      false
+    else
+      true
+      end
+    end
+  end
 
 venue = Venue.new('Bluebird', 4)
