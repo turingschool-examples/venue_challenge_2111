@@ -1,6 +1,6 @@
-require 'rspec'
-require './lib/venue'
-
+#require './lib/venue'
+require 'pry'
+#binding.pry
 describe Venue do
   describe '#initialize' do
     it 'is a venue' do
