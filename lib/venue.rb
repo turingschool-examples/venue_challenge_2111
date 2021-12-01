@@ -17,7 +17,7 @@ class Venue
   end
 
   def over_capacity?
-    if @capacity > 4
+    if @patrons.size > 4
       true
     else
       false
