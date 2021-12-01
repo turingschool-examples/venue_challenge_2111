@@ -27,6 +27,12 @@ class Venue
     end
   end
 
-
+  def kick_out
+    if @patrons.count > @capacity
+      @patrons.shift
+    else
+      false
+    end
+  end
 
 end
