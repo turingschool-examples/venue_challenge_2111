@@ -16,6 +16,6 @@ class Venue
   end
 
   def over_capacity?
-    @patrons.size > capacity
+    @patrons.count > capacity
   end
 end
