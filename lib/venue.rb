@@ -23,4 +23,8 @@ class Venue
       false
     end
   end
+
+  def kick_out
+    @patrons.pop
+  end
 end
