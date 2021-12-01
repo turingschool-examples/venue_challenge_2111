@@ -34,8 +34,8 @@ class Venue
     if crowd < capacity
 
     elsif crowd > capacity
-      @patrons.remove('James')
-      @patrons.remove('James')
+      @patrons.shift
+      @patrons.shift 
     end
   end
 end
