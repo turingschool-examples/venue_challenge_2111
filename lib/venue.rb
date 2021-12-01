@@ -8,4 +8,7 @@ class Venue
     @capacity = capacity
     @patrons = []
   end
+
+  def add_patron(patron)
+  end
 end
