@@ -5,29 +5,23 @@ class Venue
     @capacity = capacity
     @patrons = []
     @yell = []
-    @over_capacity = false
   end
+
   def add_patron(name)
     @patrons << name
   end
+
   def yell_at_patrons
-     patrons.each do|name|
-       @yell << name.upcase
-     end
-     return @yell
-   end
-   def over_capacity?
-     if patrons.length <= capacity
-       @over_capacity = false
-     else
-       @over_capacity = true
-     end
-   end
-   def kick_out
-     if patrons.length >= @capacity
-       patrons.pop
-     elsif patrons.length <= @capacity
-       @over_capacity = false
-     end
+    patrons.map {|name| name.upcase}
+  end
+
+  def over_capacity?
+    @patrons.count > @capacity
+  end
+
+  def kick_out
+   while over_capacity?
+      @patrons.pop
     end
  end
+end
